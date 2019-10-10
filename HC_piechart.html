@@ -1,0 +1,67 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Number of Men and Women Enrolled at UCSD in 2018'
+    },
+    xAxis: {
+        categories: ['2018'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Men vs Women Enrolled',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+    name: 'Brands',
+    colorByPoint: true,
+    data: [{
+        name: 'Men',
+        y: 3220,
+        sliced: true,
+        selected: true
+        }, {
+        name: 'Women',
+        y: 3484
+        }]
+    }]
+});
+</script>
