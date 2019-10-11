@@ -12,7 +12,6 @@
 
 <script>
 
-
     // set the dimensions and margins of the graph
     var margin = {top: 30, right: 30, bottom: 70, left: 60},
         width = 460 - margin.left - margin.right,
@@ -62,5 +61,12 @@
 
     })
 
+svg.append("text")
+        .attr("x", 200 )             
+        .attr("y", 5)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style("text-decoration", "underline")  
+        .text("Number of Men Applying to UCSD Over Time");
     
     </script>
